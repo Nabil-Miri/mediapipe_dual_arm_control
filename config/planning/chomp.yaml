@@ -1,0 +1,27 @@
+request_adapters: >-
+  default_planning_request_adapters/AddTimeOptimalParameterization
+  default_planning_request_adapters/FixWorkspaceBounds
+  default_planning_request_adapters/FixStartStateBounds
+  default_planning_request_adapters/FixStartStateCollision
+  default_planning_request_adapters/FixStartStatePathConstraints
+start_state_max_bounds_error: 0.1
+
+chomp:
+  planning_time_limit: 10.0
+  max_iterations: 200
+  max_iterations_after_collision_free: 5
+  smoothness_cost_weight: 0.1
+  obstacle_cost_weight: 1.0
+  learning_rate: 0.01
+  smoothness_cost_velocity: 0.0
+  smoothness_cost_acceleration: 1.0
+  smoothness_cost_jerk: 0.0
+  ridge_factor: 0.001
+  use_pseudo_inverse: false
+  pseudo_inverse_ridge_factor: 1.0e-4
+  use_stochastic_descent: true
+  stochastic_descent_min_improvement_for_line_search: 1.0e-3
+  enable_failure_recovery: false
+  max_recovery_attempts: 5
+  trajectory_initialization_method: "quintic-spline"
+  # activate_parameter: "chomp.active"

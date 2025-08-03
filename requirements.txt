@@ -1,0 +1,4 @@
+# Python dependencies for dual-arm hand tracking
+mediapipe>=0.10.0
+opencv-python>=4.5.0
+numpy>=1.21.0

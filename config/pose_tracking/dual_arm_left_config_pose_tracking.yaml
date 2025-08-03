@@ -1,0 +1,56 @@
+###############################################
+# Configuration for left arm pose tracking
+###############################################
+use_gazebo: false
+
+## Properties of incoming commands
+command_in_type: "speed_units"
+scale:
+  linear:  0.6
+  rotational:  0.3
+  joint: 0.01
+
+## Properties of outgoing commands
+publish_period: 0.034
+
+# What type of topic does your robot driver expect?
+command_out_type: trajectory_msgs/JointTrajectory
+
+# What to publish?
+publish_joint_positions: true
+publish_joint_velocities: true
+publish_joint_accelerations: false
+
+## Plugins for smoothing outgoing commands
+smoothing_filter_plugin_name: "online_signal_smoothing::ButterworthFilterPlugin"
+
+## MoveIt properties
+move_group_name: left_panda_arm  # Left arm group name
+planning_frame: world  # The MoveIt planning frame
+
+## Other frames
+ee_frame_name: left_panda_hand  # Left end effector link
+robot_link_command_frame: left_panda_hand  # Commands in left hand frame
+
+## Stopping behaviour
+incoming_command_timeout: 0.1
+num_outgoing_halt_msgs_to_publish: 4
+
+## Configure handling of singularities and joint limits
+lower_singularity_threshold: 17.0
+hard_stop_singularity_threshold: 30.0
+joint_limit_margin: 0.1
+
+## Collision checking
+check_collisions: true
+collision_check_rate: 10.0
+collision_check_type: "threshold_distance"
+
+## Topic names (left arm specific)
+cartesian_command_in_topic: ~/delta_twist_cmds
+joint_command_in_topic: ~/delta_joint_cmds
+robot_link_command_in_topic: ~/pose_target_cmds
+planning_frame_transform_in_topic: ~/planning_frame_transform
+status_topic: ~/status
+command_out_topic: /left_arm_controller/joint_trajectory
+joint_topic: /joint_states

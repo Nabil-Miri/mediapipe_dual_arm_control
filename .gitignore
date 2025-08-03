@@ -1,0 +1,32 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# IDE files
+.vscode/
+.cache/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ignore external repositories (we'll manage them with custom files)
+src/moveit2/
+src/moveit_resources/
+src/launch_param_builder/
+
+# But include our custom files and documentation
+!src_custom/
+!README.md
+!debug_dual_arm.sh
+!monitor_right_arm.sh
