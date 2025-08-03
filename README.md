@@ -1,4 +1,4 @@
-# 🤖 Dual-Arm Teleoperation with MediaPipe Hand Tracking
+# 🤖 Dual-Arm Teleoperation with MediaPipe Hand Pose Tracking
 Control two robotic arms using your hands! This project combines [MediaPipe](https://github.com/google-ai-edge/mediapipe) hand tracking with [MoveIt Servo](https://moveit.ai/moveit/ros2/servo/jog/2020/09/09/moveit2-servo.html) for smooth, intuitive dual-arm panda robot control.
 
 ## 🎬 Demo Video
