@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/48c7b8e3-37a6-44eb-847f-e769add969b7
 # 🤖 Dual-Arm Hand Tracking Control System
 Control two robotic arms using your hands! This project combines [MediaPipe](https://github.com/google-ai-edge/mediapipe) hand tracking with [MoveIt Servo](https://moveit.ai/moveit/ros2/servo/jog/2020/09/09/moveit2-servo.html) for smooth, intuitive dual-arm panda robot control.
 
