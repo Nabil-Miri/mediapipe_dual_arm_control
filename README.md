@@ -278,6 +278,7 @@ A fully functional dual arm hand tracking system where:
 -->
 ## 🚀 Potential Improvements
 
+- **Dual-Arm Robot**: Use a dual arm robot like [FR3 DUO](https://franka.de/news/real-world-robotics-insights-from-fr3-duo-mobile-showcase) rather than 2 separate manipulators.
 - **Gesture Start/Stop**: Use hand gestures to start or stop the system.
 - **Better Depth**: Add monocular depth estimation for more accurate hand positions.
 - **Smoother Motion**: Improve filtering for steadier robot vision pose targets.
